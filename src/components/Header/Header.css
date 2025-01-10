@@ -1,0 +1,74 @@
+/* General Styling for the Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4; /* Light gray background */
+    border-bottom: 2px solid #ddd; /* Optional border for separation */
+  }
+  
+  /* Logo on the far left */
+  .header-left {
+    flex: 1; /* Allow space for the logo */
+  }
+  
+  .logo {
+    max-height: 50px; /* Adjust logo size */
+    cursor: pointer;
+  }
+  
+  /* Centered title image */
+  .header-title {
+    flex: 2; /* Center area for title */
+    text-align: center;
+  }
+  
+  .title-image {
+    max-height: 60px; /* Adjust title image size */
+  }
+  
+  /* Navigation bar on the top right */
+  .navbar {
+    flex: 3; /* Space for the navigation and sign-in button */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    margin: 0 10px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    color: #007bff; /* Optional hover effect */
+  }
+  
+  /* Sign-In Button on the far right */
+  .auth button {
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .auth button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
