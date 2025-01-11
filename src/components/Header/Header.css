@@ -1,74 +1,182 @@
-/* General Styling for the Header */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f4f4f4; /* Light gray background */
-    border-bottom: 2px solid #ddd; /* Optional border for separation */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fef4df; /* Light gray background */
+  border-bottom: 2px solid #d0c7b4; /* Optional border for separation */
+  color: #11213F;
+  position: relative; /* For positioning the hamburger menu */
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #11213F;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-size: 12px;
+  margin-top: -30px;
+}
+
+/* Logo on the far left */
+.header-left {
+  flex: 1; /* Allow space for the logo */
+}
+
+.logo {
+  max-height: 50px; /* Adjust logo size */
+  cursor: pointer;
+}
+
+/* Centered title section */
+.header-center {
+  flex: 2; /* Center area for title */
+  text-align: center;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  left: 10px; /* Fixed on the left near sign-in */
+  top: 15px; /* Align with the header's height */
+}
+
+.hamburger div {
+  background-color: #11213F;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Bar */
+.navbar {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  justify-content: space-evenly;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #11213F;
+  font-weight: bold;
+}
+
+.homebutton:hover {
+  color: #ED5784;
+}
+
+.yearbutton:hover {
+  color: #5DAD72;
+}
+
+.monthbutton:hover {
+  color: #547ADA;
+}
+
+.journalbutton:hover {
+  color: #FA7928;
+}
+
+/* Sign-In Button */
+.auth button {
+  margin-left: 20px;
+  padding: 8px 16px;
+  background-color: #547ADA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth button:hover {
+  background-color: #0056b3;
+}
+
+
+  @media (max-width: 750px) {
+    .hamburger {
+      display: flex; /* Show hamburger menu on smaller screens */
+    }
+
+    .logo {
+      display: none;
+    }
   
-  /* Logo on the far left */
-  .header-left {
-    flex: 1; /* Allow space for the logo */
-  }
+    .navbar {
+      display: none;
+      flex-direction: column;
+      background-color: #9898a8;
+      position: absolute;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      padding: 10px 0;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
   
-  .logo {
-    max-height: 50px; /* Adjust logo size */
-    cursor: pointer;
-  }
+    .navbar.visible {
+      display: flex;
+    }
   
-  /* Centered title image */
-  .header-title {
-    flex: 2; /* Center area for title */
-    text-align: center;
-  }
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: space-evenly;
+      width: 100%;
+    }
   
-  .title-image {
-    max-height: 60px; /* Adjust title image size */
-  }
+    .navbar ul li {
+      margin: 10px 0;
+      text-align: center;
+      height: 5px;
+    }
   
-  /* Navigation bar on the top right */
-  .navbar {
-    flex: 3; /* Space for the navigation and sign-in button */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #11213F;
+      font-weight: bold;
+    }
   
-  .navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
+    .homebutton:hover {
+      color: #ED5784;
+    }
   
-  .navbar li {
-    margin: 0 10px;
-  }
+    .yearbutton:hover {
+      color: #5DAD72;
+    }
   
-  .navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
+    .monthbutton:hover {
+      color: #547ADA;
+    }
   
-  .navbar a:hover {
-    color: #007bff; /* Optional hover effect */
+    .journalbutton:hover {
+      color: #FA7928;
+    }
   }
-  
-  /* Sign-In Button on the far right */
-  .auth button {
-    margin-left: 20px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .auth button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  

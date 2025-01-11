@@ -41,7 +41,7 @@ const AuthModal = ({ isOpen, onClose, setUser }) => {
         <button className="close-button" onClick={onClose}>
           &times;
         </button>
-        <h2>Sign In</h2>
+        <h2 className="signin">Sign In</h2>
         <form onSubmit={handleEmailSignIn}>
           <input
             type="email"
