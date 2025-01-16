@@ -10,14 +10,15 @@ import SignUp from "./components/Header/Auth/SignUp";
 import SignIn from "./components/Header/Auth/SignIn";
 
 const App = () => {
-  const { user } = useAuth(); // Correctly use the user value
+  const { user } = useAuth();
 
   return (
     <Router>
       <Header user={user} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/year" element={user ? <Year /> : <SignIn />} />
+        {/* Correctly link the /year route */}
+        <Route path="/year" element={<Year />} />
         <Route path="/month" element={user ? <Month /> : <SignIn />} />
         <Route path="/journal" element={user ? <Journal /> : <SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
